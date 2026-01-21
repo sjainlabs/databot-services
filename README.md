@@ -28,9 +28,37 @@ The site is configured for GitHub Pages deployment. Simply enable GitHub Pages i
 
 ## Local Development
 
-To run locally:
+To preview the site locally, you have several options:
+
+### Option 1: Open directly in browser
+Simply open the `index.html` file directly in your web browser. This works because the site uses Tailwind CSS via CDN and requires no build step.
+
+### Option 2: Use a static server
+
+**Using Python:**
 ```bash
-python3 -m http.server 8080
+python3 -m http.server 8000
+```
+Then visit http://localhost:8000 in your browser.
+
+**Using Node.js:**
+```bash
+npx serve .
 ```
 
-Then visit http://localhost:8080 in your browser.
+**Note:** Tailwind CSS is loaded via CDN, so no build step or npm install is required.
+
+## Deploy to GitHub Pages
+
+### Option A (Recommended - Simple)
+
+1. Go to your repository on GitHub
+2. Navigate to **Settings** → **Pages**
+3. Under **Source**, select the `main` branch
+4. Select the root directory (`/`)
+5. Click **Save**
+6. Your site will be available at `https://<owner>.github.io/<repo>/`
+
+### Option B (Advanced - Using GitHub Actions)
+
+For more advanced deployment workflows, you can use GitHub Actions or push to a `gh-pages` branch. See the [GitHub Pages documentation](https://docs.github.com/en/pages) for more details.
