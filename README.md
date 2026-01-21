@@ -1,5 +1,5 @@
 ```markdown
-![Databot Services logo](assets/logo.jpeg)
+![DataBot Services logo](assets/logo.jpeg)
 
 # DataBot Services
 
