@@ -1,4 +1,3 @@
-```markdown
 ![DataBot Services logo](assets/logo.jpeg)
 
 # DataBot Services
@@ -52,4 +51,3 @@ Option B — Using `gh-pages` branch or GitHub Actions:
 
 - Brand colors and UI are implemented using Tailwind utility classes with an inline Tailwind configuration for the `databot` color palette.
 - If you want to migrate to a full Tailwind build process (for production optimizations like purge/scan), set up a local build with PostCSS and the Tailwind CLI and replace the CDN usage.
-```
