@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DataBot Services - Modern data engineering and analytics solutions founded by Sohil Jain">
+    <title>DataBot Services - Data Engineering & Analytics</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        /* Custom smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Animation for hero section */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        /* Gradient background */
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        /* Mobile menu transition */
+        .mobile-menu {
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-900">
+    
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo/Brand -->
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-bold text-indigo-600">DataBot Services</a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#home" class="nav-link text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium transition duration-300">Home</a>
+                        <a href="#services" class="nav-link text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium transition duration-300">Services</a>
+                        <a href="#about" class="nav-link text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium transition duration-300">About</a>
+                        <a href="#contact" class="nav-link text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium transition duration-300">Contact</a>
+                    </div>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-indigo-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="mobile-menu hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="mobile-nav-link text-gray-700 hover:text-indigo-600 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="#services" class="mobile-nav-link text-gray-700 hover:text-indigo-600 block px-3 py-2 rounded-md text-base font-medium">Services</a>
+                <a href="#about" class="mobile-nav-link text-gray-700 hover:text-indigo-600 block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="#contact" class="mobile-nav-link text-gray-700 hover:text-indigo-600 block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg pt-20 pb-16 md:pt-32 md:pb-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center fade-in-up">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
+                    Welcome to DataBot Services
+                </h1>
+                <p class="text-xl md:text-2xl text-indigo-100 mb-8 max-w-3xl mx-auto">
+                    Modern data engineering and analytics solutions that transform your data into actionable insights
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#services" class="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition duration-300 shadow-lg">
+                        Our Services
+                    </a>
+                    <a href="#contact" class="bg-indigo-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-800 transition duration-300 shadow-lg">
+                        Get in Touch
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Section -->
+    <section id="services" class="py-16 md:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    We provide comprehensive data solutions tailored to your business needs
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <article class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition duration-300">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Data Engineering</h3>
+                    <p class="text-gray-600">
+                        Build robust data pipelines and infrastructure to collect, process, and store your data efficiently at scale.
+                    </p>
+                </article>
+                
+                <!-- Service 2 -->
+                <article class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition duration-300">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Data Analytics</h3>
+                    <p class="text-gray-600">
+                        Transform raw data into meaningful insights with advanced analytics and visualization techniques.
+                    </p>
+                </article>
+                
+                <!-- Service 3 -->
+                <article class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition duration-300">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Cloud Solutions</h3>
+                    <p class="text-gray-600">
+                        Deploy and manage your data infrastructure on leading cloud platforms with best practices.
+                    </p>
+                </article>
+                
+                <!-- Service 4 -->
+                <article class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition duration-300">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Machine Learning</h3>
+                    <p class="text-gray-600">
+                        Implement intelligent solutions using machine learning algorithms to automate and optimize processes.
+                    </p>
+                </article>
+                
+                <!-- Service 5 -->
+                <article class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition duration-300">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Data Strategy</h3>
+                    <p class="text-gray-600">
+                        Develop comprehensive data strategies aligned with your business objectives and growth goals.
+                    </p>
+                </article>
+                
+                <!-- Service 6 -->
+                <article class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition duration-300">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Data Governance</h3>
+                    <p class="text-gray-600">
+                        Ensure data quality, security, and compliance with industry standards and regulations.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">About DataBot Services</h2>
+                    <p class="text-lg text-gray-600 mb-6">
+                        DataBot Services is a modern data engineering and analytics company dedicated to helping businesses unlock the full potential of their data.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-6">
+                        Founded by <strong>Sohil Jain</strong>, an experienced data professional with a passion for building scalable data solutions, we combine technical expertise with business acumen to deliver results that matter.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8">
+                        Our mission is to make data-driven decision making accessible to organizations of all sizes through innovative solutions and best practices.
+                    </p>
+                    <a href="https://www.linkedin.com/in/jainsohil/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-indigo-600 hover:text-indigo-700 font-semibold transition duration-300">
+                        <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                        Connect with Sohil Jain on LinkedIn
+                    </a>
+                </div>
+                
+                <div class="bg-gradient-to-br from-indigo-500 to-purple-600 rounded-lg p-8 text-white">
+                    <h3 class="text-2xl font-bold mb-6">Why Choose Us?</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Expert team with proven track record in data engineering</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Cutting-edge technologies and best practices</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Customized solutions tailored to your needs</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>End-to-end support from strategy to implementation</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Focus on scalability and long-term value</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-24 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Get in Touch</h2>
+                <p class="text-lg text-gray-600">
+                    Ready to transform your data into insights? Let's discuss how we can help your business grow.
+                </p>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow-lg p-8 md:p-12">
+                <form class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent" placeholder="Your name" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent" placeholder="your@email.com" required>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label for="company" class="block text-sm font-medium text-gray-700 mb-2">Company</label>
+                        <input type="text" id="company" name="company" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent" placeholder="Your company">
+                    </div>
+                    
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                        <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent" placeholder="Tell us about your project..." required></textarea>
+                    </div>
+                    
+                    <div class="text-center">
+                        <button type="submit" class="bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition duration-300 shadow-lg">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">DataBot Services</h3>
+                    <p class="text-gray-400">
+                        Modern data engineering and analytics solutions for your business.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition duration-300">Services</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition duration-300">About</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Connect</h4>
+                    <a href="https://www.linkedin.com/in/jainsohil/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-gray-400 hover:text-white transition duration-300">
+                        <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                        LinkedIn
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 DataBot Services. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Vanilla JavaScript -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when a link is clicked
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Smooth scrolling for navigation links
+        const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link, footer a[href^="#"]');
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    const navHeight = 64; // Height of fixed navigation
+                    const targetPosition = targetElement.offsetTop - navHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Form submission handler (basic validation and alert)
+        const contactForm = document.querySelector('form');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const formData = new FormData(contactForm);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const message = formData.get('message');
+            
+            if (name && email && message) {
+                alert(`Thank you, ${name}! Your message has been received. We'll get back to you at ${email} soon.`);
+                contactForm.reset();
+            }
+        });
+        
+        // Add active state to navigation links based on scroll position
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navHeight = 64;
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - navHeight - 10;
+                const sectionBottom = sectionTop + section.offsetHeight;
+                const scrollPosition = window.scrollY;
+                
+                if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                    const currentId = section.getAttribute('id');
+                    
+                    // Remove active class from all links
+                    document.querySelectorAll('.nav-link').forEach(link => {
+                        link.classList.remove('text-indigo-600');
+                        link.classList.add('text-gray-700');
+                    });
+                    
+                    // Add active class to current link
+                    const activeLink = document.querySelector(`.nav-link[href="#${currentId}"]`);
+                    if (activeLink) {
+                        activeLink.classList.remove('text-gray-700');
+                        activeLink.classList.add('text-indigo-600');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
