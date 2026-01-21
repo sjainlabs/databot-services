@@ -1,4 +1,6 @@
 ```markdown
+![Databot Services logo](assets/logo.jpeg)
+
 # DataBot Services
 
 Modern data engineering and analytics solutions.
